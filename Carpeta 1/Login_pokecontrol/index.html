@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+	<title>Login - PokeControl</title>
+	<div th:replace="plantillas/base :: in_head"></div >
+	<link rel="stylesheet" th:href="@{/styles/style_login.css}" />
+    <link rel="stylesheet" href="style_login.css"/>
+
+</head >
+
+<body>
+	<nav th:replace="plantillas/base :: nav"></nav >
+	<form th:action="@{/auth/logout}" method="POST" id="logoutForm"></form>
+
+ <form th:action="@{/auth/logout}" method="POST" id="logoutForm"></form>
+    <div class="container" id="container">
+
+        <div class="form-container sign-up-container">
+            <form action="#" id="signupform" class="form-horizontal" role="form"
+            method="POST" enctype="multipart/form-data" th:action="@{/auth/register}" th:object="${usuario}">
+                <h1>Crea tu cuenta</h1>
+                <input type="text" class="form-control" name="email"
+									placeholder="Email" th:field="*{email}">
+                <input type="text" class="form-control" name="nombre"
+									placeholder="Nombre" th:field="*{nombre}">
+                <input type="password" class="form-control" name="passwd"
+                                            placeholder="Password" th:field="*{password}">
+                <input id="filebutton" name="file"
+                                            class="form-control input-file" type="file">
+                
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+
+
+        <div class="form-container sign-in-container">
+            <form action="#" id="loginform" class="form-horizontal" method="POST"
+            th:action="@{/auth/login-post}" role="form">
+                <h1>Inicia sesión</h1>
+                <span>or use your account</span>
+                <span class="input-group-addon"><i
+                    class="glyphicon glyphicon-user"></i></span> <input id="login-username"
+                    type="text" class="form-control" name="username"
+                    placeholder="email">
+
+                    <span class="input-group-addon"><i
+                        class="glyphicon glyphicon-lock"></i></span> <input id="login-password"
+                        type="password" class="form-control" name="password"
+                        placeholder="password">
+
+                <a href="#">¿Olvidastes tu contraseña?</a>
+                <button id="btn-login" type="submit" class="btn btn-success">Iniciar</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+
+            </div>
+        </div> 
+        
+        <script type="text/javascript" th:src="@{/script/script_login.js}"></script>
+        <script src="script_login.js"></script>
+    </div>
+    <br>
+	<br>
+	<footer th:replace="plantillas/base :: footer"></footer>
+
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+   
+</body>
+
+</html>

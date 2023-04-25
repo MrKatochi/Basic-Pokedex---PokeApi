@@ -10,7 +10,7 @@ let currentImageIndex = 0;
 let pokemonData = [];
 
 function showCurrentImage() {
-  const defaultImage = 'resources/img/0.png';
+  const defaultImage = 'resources/img/0.3.png';
   const pokemonImage = pokemonData[currentImageIndex].image;
   
   if (!pokemonImage) {

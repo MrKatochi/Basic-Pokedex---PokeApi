@@ -1,18 +1,35 @@
 
+
 .pokedex_frame{
-background-image:url('../img/rotom.png');
+
 background-size: 100% 100%;
-  background-repeat:no-repeat;
-  width: 400px;
-  height: 800px; ; 
-  border:2px solid #000000;
-  border-radius: 50px;
+width: 30em;
+height: 55em;
+border:2px solid #000000;
+border-radius: 50px;
+position:fixed;
+   top:0;
+   left:0;
+   z-index:1001;
+}
+
+.pokedex_frame1{
+background-image: url('../img/rotom_2.png');
+}
+
+.pokedex_frame2, .pokemon_frame3{
+  background-image: url('../img/rotom_noface.png');
+}
+
+
+.screen{
 text-align: center;
 }
 
 .image-frame {
-  margin-top: 300px;
-    height: 200px;
+  z-index: 1;
+  margin-top: 15em;
+    height: 20em;
     justify-content: center;
     background-image: url('../img/bg_poke.png');
     background-position: center;
@@ -23,27 +40,30 @@ text-align: center;
 }
 
 .button {
-    font-size: 19px;
+  font-size: 1em;
     color: rgb(7, 7, 7);
     border: none;
     border-radius: 25px;
 }
 
 .button:hover {
-    background-color: #000000;
-    color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .types, .selector{
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
   
-  .type1, .type2{
-    border: 2px solid black;
-    border-radius: 34%;
-    height: 20px;
-    width: 60px;
-    display: inline-block;
-  }
+.type1, .type2{
+  border: 2px solid black;
+  border-radius: 34%;
+  height: 20px;
+  width: 60px;
+  display: inline-block;
+  margin: 1%;
+}
+
+/*____________Part2 - Menu__________________*/
 
