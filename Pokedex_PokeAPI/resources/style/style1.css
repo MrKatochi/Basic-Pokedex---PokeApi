@@ -3,28 +3,23 @@
 background-image:url('../img/rotom.png');
 background-size: 100% 100%;
   background-repeat:no-repeat;
-  width: 200px;
-  height: 400px; ; 
+  width: 400px;
+  height: 800px; ; 
   border:2px solid #000000;
+  border-radius: 50px;
 text-align: center;
 }
 
-.visor{
-margin-top: 130px;
-}
-
 .image-frame {
-    height: 100%;
+  margin-top: 300px;
+    height: 200px;
     justify-content: center;
     background-image: url('../img/bg_poke.png');
-    
     background-position: center;
     background-repeat: no-repeat;
-    background-size:50%; /* o especificar el tamaño deseado */
-}
-
-.search{
-    width: 50%;
+    background-size:50%;
+    display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -39,7 +34,7 @@ margin-top: 130px;
     color: #ffffff;
 }
 
-.types{
+.types, .selector{
     display: flex;
     justify-content: center;
   }

@@ -11,37 +11,22 @@
 
 <body>
 	<div class="pokedex_frame">
-		<div class="visor">
-			<p id="pokemon_number-name"></p>
-
-			<div class="image-frame">
-				<div class="image-container">
-
-					<img class="image" src="resources/img/0.png" alt="Imagen de Pokémon">
-
-				</div>
-			</div>
-
-			<div class="types">
-				<p class="type1" id="pokemon_type1"></p>
-
-				<p class="type2" id="pokemon_type2"></p>
-			</div>
-
-		</div>
-
-		<button id="previous" class="button button_prev">&lt;</button>
 		<input type="text" class="search" id="search" placeholder=" search pokemon ...">
-		<button id="next" class="button button_next">&gt;</button>
-
-
-
-
+		<div class="image-frame">
+			<img class="image" src="resources/img/0.png" alt="Imagen de Pokémon">			
+		</div>
+		<div class="selector">
+			<button id="previous" class="button button_prev">&lt;</button>
+				<p class="numb" id="pokemon_number-name"></p>
+			<button id="next" class="button button_next">&gt;</button>
+		</div>
+			
+		<div class="types">
+			<p class="type1" id="pokemon_type1"></p>
+			<p class="type2" id="pokemon_type2"></p>
+		 </div>
 	</div>
-
-
 	<script src="resources/script/pokeAPI.js"></script>
 	<script src="resources/script/general.js"></script>
 </body>
-
 </html>
